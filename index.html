@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна - Пантеон</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Пантеон - Ліга Легенд</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="biography.html">Біографія</a></li>
+                <li><a href="skills.html">Скіли</a></li>
+                <li><a href="gameplay.html">Геймплей</a></li>
+                <li><a href="gallery.html">Галерея</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="content">
+            <h2>Вітаємо на сторінці Пантеона!</h2>
+            <p>Пантеон - це персонаж гри "Ліга Легенд", могутній воїн, який відомий своїм бойовим мистецтвом і незламним духом. Дізнайтесь більше про його біографію, скіли, геймплей і перегляньте галерею зображень.</p>
+        </section>
+        
+        <div class="container">
+            <div> Давно виявлено, що при оцінці дизайну і композиції читаний текст заважає зосередитись.</div>
+            <div> Давно виявлено, що при оцінці дизайну і композиції читаний текст заважає зосередитись.</div>
+        </div>
+
+        <div class="container">
+            <div class="blue">blue...</div>
+            <div class="red">red...</div>
+            <div class="green">green...</div>
+        </div>
+
+        <div class="grid-container">
+            <div class="col-1">Цей стовпець займає 25% ширини.</div>
+            <div class="col-2">Цей стовпець займає 50% ширини.</div>
+            <div class="col-1">Цей стовпець займає 25% ширини.</div>
+        </div>
+         <div id="clock"></div>
+    <script>
+        function getWorldTime() {
+            fetch('http://worldtimeapi.org/api/ip')
+            .then(response => response.json())
+            .then(data => {
+                var time = new Date(data.datetime);
+                var timeString = time.toLocaleTimeString();
+                document.getElementById('clock').textContent = timeString;
+            })
+            .catch(error => {
+                console.error('Помилка отримання часу з WorldTimeAPI:', error);
+            });
+        }
+
+        setInterval(getWorldTime, 1000);
+    </script>
+    </main>
+
+    <footer>
+        <div class="footer-banner">
+            <class="footer-banner-bg">
+            <div class="footer-banner-content">
+                <p class="footer-banner-text anim-text1">Могутній воїн</p>
+                <p class="footer-banner-text anim-text2">Незламний дух</p>
+                <p class="footer-banner-text anim-text3">Воїн світу</p>
+                <img src="gallery/img1.png" alt="Зображення 1" class="footer-banner-img anim-img1">
+                <img src="gallery/img2.png" alt="Зображення 2" class="footer-banner-img anim-img2">
+            </div>
+        </div>
+        <p>&copy; 2024 Пантеон. Всі права захищено</п>
+    </footer>
+</body>
+</html>
