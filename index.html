@@ -45,7 +45,7 @@
          <div id="clock"></div>
     <script>
         function getWorldTime() {
-            fetch('http://worldtimeapi.org/api/ip')
+            fetch('https://worldtimeapi.org/api/ip')
             .then(response => response.json())
             .then(data => {
                 var time = new Date(data.datetime);
